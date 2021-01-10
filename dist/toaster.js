@@ -2,7 +2,6 @@
 * 	13/12/2020 - Somnath Sardar
 * 	Toaster Message helps you to show custom messages
 * 	Trough Toaster message you can show Error message, Success message and warning message
-* 	Each message has it's own backgrond color.
 *
 *
 * 	To show Toast message you need to call showToast function
