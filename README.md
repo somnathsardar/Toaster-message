@@ -5,6 +5,8 @@
 - First argument is status (error, success, warning)
 - Second arguments is the message.
 
-``` Errror Toast Message:   showToast('error',message); ```
-``` Success Toast Message:   showToast('success',message); ```
-``` Warning Toast Message:   showToast('warning',message); ```
+``` 
+    Errror Toast Message:   showToast('error',message); 
+    Success Toast Message:   showToast('success',message); 
+    Warning Toast Message:   showToast('warning',message); 
+```
