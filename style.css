@@ -1,0 +1,25 @@
+textarea.border {
+  visibility: visible;
+  -webkit-animation: b-fadein 0.5s, b-fadeout 0.5s 1s;
+  animation: b-fadein 0.5s, b-fadeout 0.5s 1s;
+}
+
+@-webkit-keyframes b-fadein {
+  from {border: none;} 
+  to {border: 1px solid #4391df !important;}
+}
+
+@keyframes b-fadein {
+  from {border: none;} 
+  to {border: 1px solid #4391df !important;}
+}
+
+@-webkit-keyframes b-fadeout {
+  from {border: 1px solid #4391df !important;} 
+  to {border: none;}
+}
+
+@keyframes b-fadeout {
+  from {border: 1px solid #4391df !important;} 
+  to {border: none;}
+}
