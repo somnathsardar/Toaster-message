@@ -1,5 +1,7 @@
 # Toaster Message
 
+### It requires jQuery. So do not forget to include jquery first
+
 - To show Toast message you need to call showToast function
 - This function requires two arguments.
 - First argument is status (error, success, warning)
