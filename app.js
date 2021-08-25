@@ -1,27 +1,20 @@
-function checkTextBox()
-{
-	if($('#toast-message-box').val() == ''){
-		$('#toast-message-box').focus()
-		return false;
-	}
-	else
-		return true;
-}
+document.getElementById('error-taost-btn').addEventListener('click', ()=>{
+	let message = document.getElementById('toast-message-box').value;
+	showToast('error', message).then((d)=>{
+		console.log(d);
+	});
+})
 
-$('#error-taost-btn').click(()=>{
-	if(checkTextBox()){
-		showToast('error', $('#toast-message-box').val());
-	}
-});
+document.getElementById('success-taost-btn').addEventListener('click', ()=>{
+	let message = document.getElementById('toast-message-box').value;
+	showToast('success', message).then((d)=>{
+		console.log(d);
+	});
+})
 
-$('#success-taost-btn').click(()=>{
-	if(checkTextBox()){
-		showToast('success', $('#toast-message-box').val());
-	}
-});
-
-$('#warning-taost-btn').click(()=>{
-	if(checkTextBox()){
-		showToast('warning', $('#toast-message-box').val());
-	}
-});
+document.getElementById('warning-taost-btn').addEventListener('click', ()=>{
+	let message = document.getElementById('toast-message-box').value;
+	showToast('warning', message).then((d)=>{
+		console.log(d);
+	});
+})

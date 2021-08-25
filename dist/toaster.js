@@ -6,45 +6,53 @@
 *
 * 	To show Toast message you need to call showToast function
 * 	This function requires two arguments.
-*	First argument is status (error, success, warning)
-*	Second arguments is the message.
+*		First argument is status (error, success, warning)
+*		Second arguments is the message.
 *	
 *	
-*	Errror Toast Message:   showToast('error',message);
-*	Success Toast Message:   showToast('success',message);
-*	Warning Toast Message:   showToast('warning',message);
+*		Errror Toast Message:   showToast('error',message);
+*		Success Toast Message:   showToast('success',message);
+*		Warning Toast Message:   showToast('warning',message);
 */
 
 function showToast(status,message)
 {
-	if(status === 'error')
-	{
-		let $toastError = $("<div>", {"class": "toast-message toast-error show"});
-		$toastError.html(message);
-		$('body').append($toastError);
-	  	setTimeout(()=>{ 
-	  		$toastError.removeClass("show");
-	  		$($toastError).remove();
-	  	}, 5000);
-	}
-	else if(status === 'success')
-	{
-		let $toastSuccess = $("<div>", {"class": "toast-message toast-success show"});
-		$toastSuccess.html(message);
-		$('body').append($toastSuccess);
-	  	setTimeout(()=>{ 
-	  		$toastSuccess.removeClass("show");
-	  		$($toastSuccess).remove();
-	  	}, 5000);
-	}
-	else if(status === 'warning')
-	{
-		let $toastWarning = $("<div>", {"class": "toast-message toast-warning show"});
-		$toastWarning.html(message);
-		$('body').append($toastWarning);
-	  	setTimeout(()=>{ 
-	  		$toastWarning.removeClass("show");
-	  		$($toastWarning).remove();
-	  	}, 5000);
-	}
+	return new Promise((resolve, reject)=>{
+		if(status === 'error')
+		{
+			let toastError = document.createElement('div')
+			toastError.classList.value = 'toast-message toast-error show'
+			toastError.innerHTML =  message;
+			document.getElementsByTagName('body')[0].append(toastError);
+			setTimeout(()=>{ 
+				toastError.classList.remove("show");
+				toastError.remove();
+				resolve('resolved');
+			}, 1500);
+		}
+		else if(status === 'success')
+		{
+			let toastSuccess = document.createElement('div')
+			toastSuccess.classList.value = 'toast-message toast-success show'
+			toastSuccess.innerHTML =  message;
+			document.getElementsByTagName('body')[0].append(toastSuccess);
+			setTimeout(()=>{ 
+				toastSuccess.classList.remove("show");
+				toastSuccess.remove();
+				resolve('resolved');
+			}, 1500);
+		}
+		else if(status === 'warning')
+		{
+			let toastWarning = document.createElement('div')
+			toastWarning.classList.value = 'toast-message toast-warning show'
+			toastWarning.innerHTML =  message;
+			document.getElementsByTagName('body')[0].append(toastWarning);
+			setTimeout(()=>{ 
+				toastWarning.classList.remove("show");
+				toastWarning.remove();
+				resolve('resolved');
+			}, 1500);
+		}
+	});
 }
